@@ -1,0 +1,11 @@
+{
+    "name": "Pokémon Fetcher",
+    "version": "1.0.0",
+    "description": "This is an Awesome Pokémon Fetcher",
+    "manifest_version": 3,
+    "author": "Tamizhselvan R D",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Awesome Pokémon Fetcher"
+    }
+}

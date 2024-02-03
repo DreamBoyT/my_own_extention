@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Pokémon Fetcher</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2; /* Light gray background color */
+            font-family: 'Arial', sans-serif;
+            animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+        }
+
+        #pokemonContainer {
+            text-align: center;
+            animation: slideIn 1s ease-in-out; /* Slide-in animation */
+        }
+
+        #pokemonName {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        #pokemonName:focus {
+            border-color: #4CAF50; /* Green border when focused */
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #FF4040; /* Red */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #CC0000; /* Darker red on hover */
+        }
+
+        .pokemonCard {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+        }
+
+        #pokemonSprite {
+            display: none;
+            max-width: 100%;
+            max-height: 300px; /* Set a maximum height for the image */
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+  <body>
+
+      <div id="pokemonContainer">
+          <input type="text" id="pokemonName" placeholder="Enter Pokemon name">
+          <button id="fetchButton">Fetch Pokémon</button><br>
+
+          <div class="pokemonCard" id="pokemonCard">
+              <img src="" alt="Pokemon Sprite" id="pokemonSprite">
+          </div>
+      </div>
+
+      <script src="index.js"></script>
+      <script>
+          document.getElementById("fetchButton").addEventListener("click", fetchData);
+      </script>
+  </body>
+</body>
+</html>
